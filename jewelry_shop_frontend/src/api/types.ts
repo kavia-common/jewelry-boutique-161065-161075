@@ -51,3 +51,37 @@ export interface PaginatedProducts {
   page_size: number
   total: number
 }
+
+/** Order-related types */
+export interface OrderItem {
+  product_id: number
+  quantity: number
+  price: number
+  product?: Product
+}
+
+export interface Order {
+  id: number
+  status: 'pending' | 'succeeded' | 'failed' | string
+  total: number
+  created_at?: string
+  items?: OrderItem[]
+}
+
+/** Response from POST /orders/checkout */
+export interface CheckoutIntentResponse {
+  client_secret?: string
+  order_id?: number
+  // allow extra fields from backend
+  [key: string]: unknown
+}
+
+/** Store locator types */
+export interface StoreLocation {
+  id: number
+  name: string
+  address?: string
+  lat?: number
+  lng?: number
+  phone?: string
+}

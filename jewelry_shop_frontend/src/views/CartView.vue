@@ -42,7 +42,7 @@ const removeItem = async (idx: number) => {
       </div>
       <div class="summary" v-if="cartStore.items.length > 0">
         <div>Total: ${{ cartStore.totalPrice.toFixed(2) }}</div>
-        <button class="checkout" disabled>Proceed to Checkout</button>
+        <RouterLink class="checkout" :to="{ name: 'checkout' }">Proceed to Checkout</RouterLink>
       </div>
     </div>
   </div>

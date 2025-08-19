@@ -7,6 +7,12 @@
   font-weight: normal;
 }
 
+/* Button-like RouterLink */
+a.checkout {
+  display: inline-block;
+  text-decoration: none;
+}
+
 a,
 .green {
   text-decoration: none;
