@@ -1,0 +1,4 @@
+{
+    "command": "npm run dev -- --port <port> --host <host>",
+    "working_directory": "/home/kavia/workspace/code-generation/jewelry-boutique-161065-161075/jewelry_shop_frontend"
+}
